@@ -2,7 +2,6 @@
 
 var todaysDate = $("#currentDay");
 todaysDate.text(moment().format("MMMM DD, YYYY HH:mm"))
-.set
 textInput = ""
 var currentHour = moment().format("HH");
 console.log(currentHour);
@@ -23,9 +22,10 @@ hour.text(moment().set("hour", hourArray[i]).format("HA"));
 row.append(hour);
 
 //creates the text field
-var textArea = $("<text-area>");
+var textArea = $("<textarea>");
 textArea.addClass("past description col-sm-10");
 row.append(textArea);
+//changes color based on current time
 if (currentHour < hourArray[i]) {
     textArea.addClass ("future");
 }  else if (currentHour > hourArray[i]) {
@@ -38,7 +38,12 @@ if (currentHour < hourArray[i]) {
 var button = $("<button>");
 button.addClass("saveBtn col-sm-1 fas fa-save");
 row.append(button);
-
+//setting button attribute to text area
+button.attr("event-data", textArea);
+$("button").on("click", function(text) {
+    textArea.text()= JSON.stringify(textArea);
+    console.log(button)
+})
 $(".container").append(row);
 // if (arrayOfHours )
 }
@@ -51,4 +56,3 @@ $(".container").append(row);
 
 //change the css class for the background color based upon the current hour
 
-document.createElement
