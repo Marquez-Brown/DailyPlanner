@@ -3,7 +3,7 @@
 
 ## Purpose
 
-This Repository is being used to develop and display a daily planner app for the work hours of 9 to 5. It will allow you to save you schedule locally on your browser and well as show you the current time and date. 
+This Repository is being used to develop and display a daily planner app for the work hours of 9 to 5. It will allow you to save your schedule locally on your browser and well as show you the current time and date. 
 
 Link of working product
 https://marquez-brown.github.io/DailyPlanner/
